@@ -1,0 +1,15 @@
+2025-07-26 10:41:30,600 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Users\DELL\AppData\Local\JetBrains\IdeaIC2025.1\temp-testng-customsuite.xml
+
+2025-07-26 10:41:57,856 [main] INFO  Helpers.Hooks - done
+2025-07-26 10:54:12,931 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Users\DELL\AppData\Local\JetBrains\IdeaIC2025.1\temp-testng-customsuite.xml
+
+2025-07-26 10:54:34,428 [main] INFO  Helpers.Hooks - done
+2025-07-26 11:08:28,917 [main] INFO  Helpers.Hooks - done
+2025-07-26 11:13:41,478 [main] INFO  Helpers.Hooks - done
+2025-07-26 11:16:14,648 [main] INFO  Helpers.Hooks - done
+2025-07-26 11:19:21,813 [main] INFO  Helpers.Hooks - done
+2025-07-26 11:23:38,975 [main] INFO  Helpers.Hooks - done
+2025-07-26 11:30:01,071 [main] INFO  Helpers.Hooks - done
+2025-07-26 11:34:56,357 [main] INFO  Helpers.Hooks - done
