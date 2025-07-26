@@ -13,10 +13,10 @@ public class Login_Locaters {
 		PageFactory.initElements(Driver_manger.getDriver(), this);
 
 	}
-	@FindBy(xpath = "//input[@namee='username']")
+	@FindBy(xpath = "//input[@name='username']")
 	public WebElement username;
 
-	@FindBy(name = "password")
+	@FindBy(name = "passwordd")
 	public WebElement password;
 
 	@FindBy(xpath = "//button[text()=' Login ']")  

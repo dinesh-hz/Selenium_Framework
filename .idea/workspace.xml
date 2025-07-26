@@ -8,7 +8,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HTML_Report/Spark.html" beforeDir="false" afterPath="$PROJECT_DIR$/HTML_Report/Spark.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PDF_Report/ExtentPdf.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/PDF_Report/ExtentPdf.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Screenshots/verify_login_with_a_valid_credentials_26-07-2025_11-31-10.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/my_project_log.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/my_project_log.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Page_locators/Login_Locaters.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Page_locators/Login_Locaters.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/surefire-reports/testng-results.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/testng-results.xml" afterDir="false" />
