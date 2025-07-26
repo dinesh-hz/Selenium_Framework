@@ -204,7 +204,7 @@ public class Bass_Class extends Driver_manger {
 
 	public WebDriverWait Global_WebDriverWait(){
 		// Global WebDriverWait
-		wait = new WebDriverWait(driver, Duration.ofSeconds(60));
+		wait = new WebDriverWait(getDriver(), Duration.ofSeconds(60));
 
 		return wait;
 	}

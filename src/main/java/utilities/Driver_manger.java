@@ -11,7 +11,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class Driver_manger {
 
-	public static WebDriver driver = null;
+	private static  WebDriver driver = null;
 
 	public static WebDriver getDriver() {
 
