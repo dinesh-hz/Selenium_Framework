@@ -17,6 +17,9 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class Bass_Class extends Driver_manger {
+
+	protected WebDriverWait wait;
+
 	
 	public void set_URL(String APPURL) {
 		
@@ -190,11 +193,20 @@ public class Bass_Class extends Driver_manger {
 
 	public void wait_class(long waittimesecond) {
 
+
+
 		try {
 			Thread.sleep(waittimesecond);
 		} catch (InterruptedException e) {
 			e.getMessage();
 		}
+	}
+
+	public WebDriverWait Global_WebDriverWait(){
+		// Global WebDriverWait
+		wait = new WebDriverWait(driver, Duration.ofSeconds(60));
+
+		return wait;
 	}
 
 	public void sendkey_Element(WebElement elementname, String key) {

@@ -8,10 +8,14 @@ import Helpers.Hooks;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import page_actions.Homepage;
 import page_actions.LoginPage;
 import utilities.Bass_Class;
+import utilities.Driver_manger;
 import utilities.contText;
+
+import static utilities.Driver_manger.*;
 
 public class LoginPageDefinitions {
 
@@ -28,7 +32,11 @@ public class LoginPageDefinitions {
 
 		Bass.set_URL(contText.url);
 
-		Bass.wait_class(3000);
+	//	Bass.wait_class(5000);
+
+		String urlpath = getDriver().getCurrentUrl();
+
+		Bass.Global_WebDriverWait().until(ExpectedConditions.urlToBe(urlpath));
 
 		logger.info("done");
 
