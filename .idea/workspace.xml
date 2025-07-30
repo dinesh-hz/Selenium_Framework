@@ -10,9 +10,8 @@
       <change beforePath="$PROJECT_DIR$/PDF_Report/ExtentPdf.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/PDF_Report/ExtentPdf.pdf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/my_project_log.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/my_project_log.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Page_locators/Login_Locaters.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Page_locators/Login_Locaters.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/utilities/Bass_Class.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utilities/Bass_Class.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/utilities/Driver_manger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utilities/Driver_manger.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/StepDefinition/LoginPageDefinitions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/StepDefinition/LoginPageDefinitions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/extent.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/extent.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/surefire-reports/testng-results.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/testng-results.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -48,7 +47,7 @@
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;last_directory_selection&quot;: &quot;C:/Users/DELL/Downloads/Orange_Poratel/src/test/java&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/DELL/Downloads/Orange_Poratel/src/test/resources&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;
   }
 }</component>
   <component name="RecentsManager">

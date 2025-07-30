@@ -16,7 +16,7 @@ public class Login_Locaters {
 	@FindBy(xpath = "//input[@name='username']")
 	public WebElement username;
 
-	@FindBy(name = "passwordd")
+	@FindBy(name = "password")
 	public WebElement password;
 
 	@FindBy(xpath = "//button[text()=' Login ']")  

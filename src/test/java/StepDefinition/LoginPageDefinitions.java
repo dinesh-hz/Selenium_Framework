@@ -32,11 +32,11 @@ public class LoginPageDefinitions {
 
 		Bass.set_URL(contText.url);
 
-	//	Bass.wait_class(5000);
 
-		String urlpath = getDriver().getCurrentUrl();
+		String urlpath =getDriver().getCurrentUrl();
 
 		Bass.Global_WebDriverWait().until(ExpectedConditions.urlToBe(urlpath));
+
 
 		logger.info("done");
 
