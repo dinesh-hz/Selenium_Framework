@@ -8,10 +8,14 @@ import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.time.Duration;
 
 public class Driver_manger {
 
 	private static  WebDriver driver = null;
+
 
 	public static WebDriver getDriver() {
 
@@ -22,6 +26,11 @@ public class Driver_manger {
 	public static void setDriver(WebDriver driver) {
 		Driver_manger.driver = driver;
 	}
+
+
+
+	/// //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////  ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 
 	public static void lanuchbrowser(String browsername) {
 		switch (browsername) {
@@ -35,6 +44,7 @@ public class Driver_manger {
 			 */
 			driver = new ChromeDriver();
 			driver.manage().window().maximize();
+
 
 			break;
 

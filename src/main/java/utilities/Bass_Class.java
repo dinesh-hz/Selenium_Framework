@@ -6,11 +6,7 @@ import java.time.Duration;
 import java.util.Set;
 
 import org.apache.commons.io.FileUtils;
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
@@ -20,10 +16,36 @@ public class Bass_Class extends Driver_manger {
 
 	protected WebDriverWait wait;
 
-	
+	public Bass_Class() {
+
+		this.wait = new WebDriverWait(getDriver(), Duration.ofSeconds(60)); // Global timeout
+	}
+/// ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+public WebElement waitForVisibility(By locator) {
+	return wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+}
+
+	public WebElement waitForClickability(By locator) {
+		return wait.until(ExpectedConditions.elementToBeClickable(locator));
+	}
+
+	public Boolean waitForTextPresent(By locator, String text) {
+		return wait.until(ExpectedConditions.textToBePresentInElementLocated(locator, text));
+	}
+
+	public Boolean waitForInvisibility(By locator) {
+		return wait.until(ExpectedConditions.invisibilityOfElementLocated(locator));
+	}
+
+	public void waitForPageLoadComplete() {
+		wait.until(getDriver -> ((JavascriptExecutor) getDriver())
+				.executeScript("return document.readyState").equals("complete"));
+	}
+
+	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	public void set_URL(String APPURL) {
 		
-		Driver_manger.getDriver().get(APPURL);
+		getDriver().get(APPURL);
 
 	}
 
@@ -191,7 +213,7 @@ public class Bass_Class extends Driver_manger {
 
 	}
 
-	public void wait_class(long waittimesecond) {
+	public void java_wait_class(long waittimesecond) {
 
 
 
@@ -202,12 +224,7 @@ public class Bass_Class extends Driver_manger {
 		}
 	}
 
-	public WebDriverWait Global_WebDriverWait(){
-		// Global WebDriverWait
-		wait = new WebDriverWait(getDriver(), Duration.ofSeconds(60));
 
-		return wait;
-	}
 
 	public void sendkey_Element(WebElement elementname, String key) {
 
