@@ -25,17 +25,18 @@ public class SingupPage extends Bass_Class {
 	public void filluptheNewSinguppage() throws InterruptedException {
 		
 		singuppagelocater.Createaccount_btn.click();
-		
-		wait_class(3000);
 
-		
+		java_wait_class(3000);
+
+
+
 		singuppagelocater.firstname.sendKeys(contText.name);
 		
 		singuppagelocater.surname.sendKeys(contText.sname);
 		
 		singuppagelocater.mobil_mailid.sendKeys(contText.mailid);
-		
-		wait_class(3000);
+
+		java_wait_class(3000);
 
 		try {
 			singuppagelocater.reentermail.sendKeys(contText.mailid);
@@ -54,7 +55,7 @@ public class SingupPage extends Bass_Class {
 		
 		singuppagelocater.male.click();
 
-		wait_class(3000);
+		java_wait_class(3000);
 		
 		singuppagelocater.signup_btn.click();
 
@@ -62,8 +63,8 @@ public class SingupPage extends Bass_Class {
 	}
 	
 	public void closeTheBrowser() throws InterruptedException {
-		
-		wait_class(300);
+
+		java_wait_class(3000);
 		
 		Driver_manger.getDriver().quit();
 

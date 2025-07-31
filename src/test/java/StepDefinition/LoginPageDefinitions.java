@@ -32,12 +32,6 @@ public class LoginPageDefinitions {
 
 		Bass.set_URL(contText.url);
 
-
-		String urlpath =getDriver().getCurrentUrl();
-
-		Bass.Global_WebDriverWait().until(ExpectedConditions.urlToBe(urlpath));
-
-
 		logger.info("done");
 
 	}
@@ -60,7 +54,7 @@ public class LoginPageDefinitions {
 		Assert.assertTrue("the login button is not  visibled", isverifyloginbuttondisplay);
 		boolean isverifyloginbuttonenable = LoginPage.isverifyloginbuttonenable_or_disable();
 		Assert.assertTrue("login button is not enabled after enter data", isverifyloginbuttonenable);
-		Bass.wait_class(3000);
+		Bass.java_wait_class(3000);
 		LoginPage.clicklogin_button();
 
 	}
@@ -69,7 +63,7 @@ public class LoginPageDefinitions {
 	public void userShouldSeeHomepage(String expecttext) {
 
 		// step 3: use it
-		Bass.wait_class(3000);
+		Bass.java_wait_class(3000);
 		String verifyHomepage = Homepage.verifyHomepage();
 		Assert.assertEquals("user is not Homepage now", verifyHomepage, expecttext);
 
@@ -163,10 +157,10 @@ public class LoginPageDefinitions {
 
 	@Then("user should see error message of password {string}")
 	public void userShouldSeeErrorMessageOfPassword(String string) {
-		Bass.wait_class(3000);
+		Bass.java_wait_class(3000);
 
 		String requiredpassworderror = LoginPage.verifyRequiredpassworderror();
-		Bass.wait_class(3000);
+		Bass.java_wait_class(3000);
 
 		Assert.assertEquals("user cant see errormesge of password", string, requiredpassworderror);
 
@@ -223,7 +217,7 @@ public class LoginPageDefinitions {
 
 	@Then("user check on login button is disabled")
 	public void user_check_on_login_button_is_disabled() {
-		Bass.wait_class(3000);
+		Bass.java_wait_class(3000);
 
 		boolean isverifyloginbuttonenable = LoginPage.isverifyloginbuttonenable_or_disable();
 
@@ -235,7 +229,7 @@ public class LoginPageDefinitions {
 	public void user_entre_username_and_password_vaild_credentials() {
 
 		LoginPage.entreusername(contText.USER_NAME);
-		Bass.wait_class(3000);
+		Bass.java_wait_class(3000);
 
 		LoginPage.entrepassword(contText.pass_word);
 
@@ -243,7 +237,7 @@ public class LoginPageDefinitions {
 
 	@Then("user should go to the homepage")
 	public void user_should_go_to_the_homepage() {
-		Bass.wait_class(3000);
+		Bass.java_wait_class(3000);
 
 		String verifyHomepage = Homepage.verifyHomepage();
 
@@ -260,7 +254,7 @@ public class LoginPageDefinitions {
 
 	@Then("user  check on login button is enable")
 	public void user_check_on_login_button_is_enable() {
-		Bass.wait_class(3000);
+		Bass.java_wait_class(3000);
 
 		boolean enable_or_disable = LoginPage.isverifyloginbuttonenable_or_disable();
 
@@ -280,7 +274,7 @@ public class LoginPageDefinitions {
 	public void user_should_see_an_error_message(String string) {
 
 		String verifyerrormessage = LoginPage.verify_Invalid_errormessage();
-		Bass.wait_class(3000);
+		Bass.java_wait_class(3000);
 
 		Assert.assertEquals("user did not see any error mesg", verifyerrormessage, string);
 
