@@ -7,10 +7,12 @@ import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import utilities.Driver_manger;
 
+import static utilities.Driver_manger.getDriver;
+
 public class Login_Locaters {
 
 	public Login_Locaters() {
-		PageFactory.initElements(Driver_manger.getDriver(), this);
+		PageFactory.initElements(getDriver(), this);
 
 	}
 	@FindBy(xpath = "//input[@name='username']")

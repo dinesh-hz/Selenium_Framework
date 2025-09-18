@@ -5,19 +5,45 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9bd561ea-ebb8-4394-a3d9-a8fddf6afc31" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/page_actions/SingupPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/page_actions/SingupPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HTML_Report/Spark.html" beforeDir="false" afterPath="$PROJECT_DIR$/HTML_Report/Spark.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HTML_Report/spark/font-awesome.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/HTML_Report/spark/font-awesome.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HTML_Report/spark/fontawesome-webfont.svg" beforeDir="false" afterPath="$PROJECT_DIR$/HTML_Report/spark/fontawesome-webfont.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HTML_Report/spark/jsontree.js" beforeDir="false" afterPath="$PROJECT_DIR$/HTML_Report/spark/jsontree.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HTML_Report/spark/spark-script.js" beforeDir="false" afterPath="$PROJECT_DIR$/HTML_Report/spark/spark-script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HTML_Report/spark/spark-style.css" beforeDir="false" afterPath="$PROJECT_DIR$/HTML_Report/spark/spark-style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PDF_Report/ExtentPdf.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/PDF_Report/ExtentPdf.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/my_project_log.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/my_project_log.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Excell_read/Excel_Util.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Excell_read/Excel_Util.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Page_locators/Login_Locaters.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Page_locators/Login_Locaters.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/page_actions/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/page_actions/LoginPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/runners/LoginTestRunner.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/runners/Rerunner.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/runners/Runner_Class.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/StepDefinition/LoginPageDefinitions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/StepDefinition/LoginPageDefinitions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/StepDefinition/LoginfromeDataProviderDefinitions.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/runners/LoginTestRunner.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/testng-results.xml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/main/java/utilities/Bass_Class.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/test/java/StepDefinition/LoginPageDefinitions.java" root0="SKIP_INSPECTION" />
   </component>
   <component name="ProjectColorInfo">{
@@ -31,20 +57,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;JUnit.Cucumber_Runner.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.Runner_Class.executor&quot;: &quot;Run&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;TestNG.Runner_Class.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_directory_selection&quot;: &quot;C:/Users/DELL/Downloads/Orange_Poratel/src/test/java&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/DELL/Downloads/Orange_Poratel/src/test/resources&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "JUnit.Cucumber_Runner.executor": "Run",
+    "JUnit.Runner_Class.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "TestNG.Cucumber Runner.executor": "Run",
+    "TestNG.Runner_Class.executor": "Run",
+    "TestNG.Unnamed.executor": "Run",
+    "deletionFromPopupRequiresConfirmation": "false",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "last_directory_selection": "C:/Users/DELL/Downloads/Orange_Poratel/src/test/java",
+    "last_opened_file_path": "C:/Users/DELL/Downloads/partice_server/runover",
+    "settings.editor.selected.configurable": "settings.sync"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\DELL\Downloads\Orange_Poratel\src\test\resources" />
@@ -54,33 +85,51 @@
       <recent name="runners" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.Runner_Class">
-    <configuration name="Runner_Class" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Orange_Poratel" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="runners.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="runners" />
-      <option name="MAIN_CLASS_NAME" value="runners.Runner_Class" />
+  <component name="RunManager">
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <module name="runover" />
+      <option name="MAIN_CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration name="Runner_Class" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="Orange_Poratel" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="runners.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
+      <module name="serveer" />
+      <shortenClasspath name="NONE" />
+      <useClassPathOnly />
+      <option name="SUITE_NAME" value="" />
       <option name="PACKAGE_NAME" value="runners" />
       <option name="MAIN_CLASS_NAME" value="runners.Runner_Class" />
+      <option name="GROUP_NAME" value="" />
       <option name="TEST_OBJECT" value="CLASS" />
+      <option name="PARAMETERS" value="" />
+      <option name="OUTPUT_DIRECTORY" value="C:\Users\DELL\Downloads\partice_server\runover\src\test\java\runners" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <option name="PROPERTIES_FILE" value="" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="TestNG">
+      <shortenClasspath name="NONE" />
+      <useClassPathOnly />
+      <option name="SUITE_NAME" value="" />
+      <option name="PACKAGE_NAME" value="runners" />
+      <option name="MAIN_CLASS_NAME" value="runners.Runner_Class" />
+      <option name="GROUP_NAME" value="" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="PARAMETERS" value="" />
+      <option name="OUTPUT_DIRECTORY" value="C:\Users\DELL\Downloads\partice_server\runover\src\test\java\runners" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <option name="PROPERTIES_FILE" value="" />
       <properties />
       <listeners />
       <method v="2">
@@ -90,7 +139,6 @@
     <recent_temporary>
       <list>
         <item itemvalue="TestNG.Runner_Class" />
-        <item itemvalue="JUnit.Runner_Class" />
       </list>
     </recent_temporary>
   </component>

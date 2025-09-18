@@ -5,16 +5,19 @@ import org.openqa.selenium.NoSuchElementException;
 import org.testng.Assert;
 import utilities.Bass_Class;
 
+
 public class LoginPage extends Bass_Class {
 
 	Login_Locaters Locators = new Login_Locaters();
 
+
 	///////////////////////////////////////////////////////
-	public void entreusername(String username)  {
+	public void entreusername(String usernmae) {
 
 
-		try {
-			Locators.username.sendKeys(username);
+        try {
+            Locators.username.sendKeys(usernmae);
+			//Locators.username.sendKeys(getCellData(2,2);
 		} catch (NoSuchElementException e) {
 			Assert.fail("Username field not found due to incorrect XPath.");
 		}
@@ -27,11 +30,13 @@ public class LoginPage extends Bass_Class {
 	}
 
 	public void clicklogin_button() {
-		Locators.login_btn.click();
+
+        Locators.login_btn.click();
 	}
 
 	public void click_forgot_button() {
-		Locators.Forgotpassword.click();
+
+        Locators.Forgotpassword.click();
 	}
 
 	public String isverifyforgotpagehome() {

@@ -70,7 +70,7 @@ public class LoginPageDefinitions {
 	}
 
 	@Given("user entre the invalid username and password")
-	public void user_entre_the_invalid_username_and_password() {
+	public void user_entre_the_invalid_username_and_password() throws Exception {
 
 		LoginPage.entreusername("WorrogeA");
 		LoginPage.entrepassword("dvdvddj4562");
@@ -110,7 +110,7 @@ public class LoginPageDefinitions {
 	}
 
 	@Given("user entre the username")
-	public void user_entre_the_username() {
+	public void user_entre_the_username() throws Exception {
 
 		LoginPage.entreusername(contText.USER_NAME);
 
@@ -124,7 +124,7 @@ public class LoginPageDefinitions {
 	}
 
 	@Given("user dont enter anything username and password")
-	public void user_dont_enter_anything_username_and_password() {
+	public void user_dont_enter_anything_username_and_password() throws Exception {
 
 		LoginPage.entreusername("");
 		LoginPage.entrepassword("");
@@ -189,7 +189,7 @@ public class LoginPageDefinitions {
 	}
 
 	@Given("user entre the username is uses different case sensitivity")
-	public void user_entre_the_username_is_uses_different_case_sensitivity() {
+	public void user_entre_the_username_is_uses_different_case_sensitivity() throws Exception {
 
 		LoginPage.entreusername("admin");
 

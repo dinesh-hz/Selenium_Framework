@@ -44,9 +44,11 @@ public class Excel_Util {
 	// it can use take data wherever it
 	public static void main(String[] args) throws Exception {
 // this main method for cheking purpose only 
-		String data = getCellDataByColumnName(4, "password");
+		String paswword = getCellDataByColumnName(4, "password");
+        String username = getCellDataByColumnName(2, "username");
 
-		System.out.println("anme" +"   "+ data);
+
+        System.out.println("anme" +"   "+ username);
 		
 
 
