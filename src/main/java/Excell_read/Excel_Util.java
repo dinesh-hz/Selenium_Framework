@@ -15,7 +15,7 @@ public class Excel_Util {
 	// this is try to get data in hole excell sheet value we can take wherever and use it
 
 	public static String getCellDataByColumnName(int rowNum, String columnName) throws Exception {
-		FileInputStream fis = new FileInputStream("./src/test/resources/Excelldata/Logindata.xlsx");
+		FileInputStream fis = new FileInputStream("./src/test/resources/Excelldata/External_data_from_excell.xlsx");
 		Workbook wb = WorkbookFactory.create(fis);
 		Sheet sheet = wb.getSheetAt(0);
 
@@ -48,7 +48,7 @@ public class Excel_Util {
         String username = getCellDataByColumnName(2, "username");
 
 
-        System.out.println("anme" +"   "+ username);
+        System.out.println(username);
 		
 
 
