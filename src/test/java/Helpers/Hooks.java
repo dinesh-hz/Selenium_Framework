@@ -7,6 +7,8 @@ import java.time.Duration;
 import java.util.Date;
 
 import org.apache.commons.io.FileUtils;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 
@@ -19,6 +21,9 @@ import utilities.Fileread_Manager;
 import utilities.contText;
 
 public class Hooks extends Driver_manger {
+
+    private static final Logger logger = LogManager.getLogger(Hooks.class);
+
 
     private static Scenario currentScenario;
 
@@ -55,7 +60,7 @@ public class Hooks extends Driver_manger {
 
         }
 
-
+        logger.info("✅ Browser launched successfully.");
     }
 
     @After
@@ -65,30 +70,11 @@ public class Hooks extends Driver_manger {
             Driver_manger.setDriver(null); // Reset for next scenario
         }
 
+        logger.info("✅ Browser closed.");
+
     }
 
-    // Save screenshot to local folder (offline backup)
-    /*
-     * @AfterStep(order = 2) public void takescreenshot(Scenario d) {
-     *
-     * if (d.isFailed()) {
-     *
-     * try { File screenshotAs = ((TakesScreenshot)
-     * Driver_manger.getDriver()).getScreenshotAs(OutputType.FILE); // Create folder
-     * if it doesn’t exist File folder = new File("./Screenshots/local_view"); if
-     * (!folder.exists()) { folder.mkdirs(); }
-     *
-     * // Add timestamp to avoid overwriting String timestamp = new
-     * SimpleDateFormat(" dd/MM/yyyy  HH-mm-ss").format(new Date()); String filename
-     * = getScenarioName().replaceAll(" ", "_") + "_" + timestamp + ".png";
-     *
-     * File destFile = new File(folder, filename); FileUtils.copyFile(screenshotAs,
-     * destFile);
-     *
-     * } catch (IOException e) { e.printStackTrace(); }
-     *
-     * } }
-     */
+
 
     @AfterStep
     public void takeScreenshotOnFailure(Scenario scenario) {
