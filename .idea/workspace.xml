@@ -9,7 +9,8 @@
       <change beforePath="$PROJECT_DIR$/HTML_Report/Spark.html" beforeDir="false" afterPath="$PROJECT_DIR$/HTML_Report/Spark.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PDF_Report/ExtentPdf.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/PDF_Report/ExtentPdf.pdf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/my_project_log.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/my_project_log.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testng.xml" beforeDir="false" afterPath="$PROJECT_DIR$/testng.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/runners/TEST_RUNNER.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/runners/TEST_RUNNER.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
