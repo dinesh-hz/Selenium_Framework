@@ -10,13 +10,13 @@ import utilities.contText;
 public class SingupPage extends Bass_Class {
 	
 	
-	Singup_Locaters singuppagelocater = null;
+	Singup_Locaters locters = null;
 	
 	public SingupPage() {
 		
-		this.singuppagelocater=new Singup_Locaters();
+		this.locters=new Singup_Locaters();
 		
-        PageFactory.initElements(Driver_manger.getDriver(),singuppagelocater);
+        PageFactory.initElements(Driver_manger.getDriver(),locters);
 
 	}
 	
@@ -24,50 +24,42 @@ public class SingupPage extends Bass_Class {
 	
 	public void filluptheNewSinguppage() throws InterruptedException {
 		
-		singuppagelocater.Createaccount_btn.click();
+		locters.Createaccount_btn.click();
 
-		java_wait_class(3000);
+		waitForSeconds(3000);
 
 
 
-		singuppagelocater.firstname.sendKeys(contText.name);
+		locters.firstname.sendKeys(contText.name);
 		
-		singuppagelocater.surname.sendKeys(contText.sname);
+		locters.surname.sendKeys(contText.sname);
 		
-		singuppagelocater.mobil_mailid.sendKeys(contText.mailid);
+		locters.mobil_mailid.sendKeys(contText.mailid);
 
-		java_wait_class(3000);
+		waitForSeconds(3000);
 
 		try {
-			singuppagelocater.reentermail.sendKeys(contText.mailid);
+			locters.reentermail.sendKeys(contText.mailid);
 
 		} catch (Exception e) {
 			e.getStackTrace();
 		}
 
-		singuppagelocater.password.sendKeys(contText.passsowrddd);
+		locters.password.sendKeys(contText.passsowrddd);
 		
-		selecte_class(singuppagelocater.data, "text", contText.data);
+		selectFromDropdown(locters.data,Dropdowntype.text,contText.data);
+		selectFromDropdown(locters.month, Dropdowntype.text, contText.month);
+		selectFromDropdown(locters.year, Dropdowntype.text, contText.year);
 		
-		selecte_class(singuppagelocater.month, "text", contText.month);
+		locters.male.click();
 
-		selecte_class(singuppagelocater.year, "text", contText.year);
+		waitForSeconds(3000);
 		
-		singuppagelocater.male.click();
-
-		java_wait_class(3000);
-		
-		singuppagelocater.signup_btn.click();
+		locters.signup_btn.click();
 
 
 	}
 	
-	public void closeTheBrowser() throws InterruptedException {
 
-		java_wait_class(3000);
-		
-		Driver_manger.getDriver().quit();
-
-	}
 
 }

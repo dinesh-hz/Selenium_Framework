@@ -1,27 +1,25 @@
 package StepDefinition;
 
+import io.cucumber.java.en.And;
 import page_actions.LoginPage;
 import page_actions.SingupPage;
 
+import java.io.IOException;
+
 public class SingupPageDefinitions {
+	SingupPage singup = new SingupPage();
+	LoginPage login = new LoginPage();
 
-	SingupPage objsingup = new SingupPage();
+	// public static final Logger LOGER=LogManager.getLogger(SingupPageDefinitions.class);
 
-	LoginPage objlogin = new LoginPage();
+	  @And("user click the  createnewaccount butto")
+	  public void userClickTheCreatenewaccountButto() throws InterruptedException, IOException {
 
-	// public static final Logger LOGER
-	// =LogManager.getLogger(SingupPageDefinitions.class);
+		 // login.navigatetowebapge();
+		  singup.filluptheNewSinguppage();
 
-	/*
-	 * @And("user click the  createnewaccount butto") public void
-	 * userClickTheCreatenewaccountButto() throws InterruptedException, IOException
-	 * {
-	 * 
-	 * objlogin.navigatetowebapge(); objsingup.filluptheNewSinguppage();
-	 * 
-	 * // LOGER.info("hai"); }
-	 */
-
+		  // LOGER.info("hai");
+	  }
 	
 
 }

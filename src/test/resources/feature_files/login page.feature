@@ -2,17 +2,17 @@
 Feature: login page
    
    
-  Background: user can open browser to be the web page
+  Background: user can open browser to be in the web page
     Given user is on the login page
 
-  @try
+
   Scenario: verify login with a valid credentials
     Given user entre the valid username and password
       | username | Admin    |
       | password | admin123 |
     Then user click the login button
     And user should see homepage "Dashboard"
-
+  @try
   Scenario: verify login with an invalid credentials
     Given user entre the invalid username and password
     Then user click the login button

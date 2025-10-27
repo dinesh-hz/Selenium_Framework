@@ -2,8 +2,17 @@ package Page_locators;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+import utilities.Driver_manger;
+
+import static utilities.Driver_manger.getDriver;
 
 public class Singup_Locaters {
+
+	public Singup_Locaters() {
+		PageFactory.initElements(getDriver(), this);
+
+	}
 
 
 	@FindBy(xpath = "//a[text()='Create new account']")

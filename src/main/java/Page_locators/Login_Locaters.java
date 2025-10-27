@@ -7,16 +7,25 @@ import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import utilities.Driver_manger;
 
+import java.sql.DriverManager;
+
 import static utilities.Driver_manger.getDriver;
 
 public class Login_Locaters {
 
-	public Login_Locaters() {
-		PageFactory.initElements(getDriver(), this);
+	//----static elements--->
 
+
+	public Login_Locaters() {
+		// ✅ Initialize all @FindBy elements using driver from DriverManager
+		PageFactory.initElements(getDriver(), this);
 	}
+
+
 	@FindBy(xpath = "//input[@name='username']")
 	public WebElement username;
+
+
 
 	@FindBy(name = "password")
 	public WebElement password;

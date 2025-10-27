@@ -1,3 +1,4 @@
+/*
 package runners;
 
 import io.cucumber.junit.Cucumber;
@@ -44,3 +45,4 @@ public class Runner_Class extends AbstractTestNGCucumberTests {
 	
 
 }
+*/

@@ -18,104 +18,107 @@ import utilities.Driver_manger;
 import utilities.Fileread_Manager;
 import utilities.contText;
 
-public class Hooks {
+public class Hooks extends Driver_manger {
 
-	private static Scenario currentScenario;
-	Fileread_Manager file_rad = new Fileread_Manager();
+    private static Scenario currentScenario;
 
-	public static String getScenarioName() {
-		return currentScenario != null ? currentScenario.getName() : "UnknownScenario";
-	}
+    Fileread_Manager file_rad = new Fileread_Manager();
 
-	@Before
-	public void browser_luach_before_Scenario(Scenario scenario) {
+    public static String getScenarioName() {
+        return currentScenario != null ? currentScenario.getName() : "UnknownScenario";
+    }
 
-
-		currentScenario = scenario;
+    @Before
+    public void setup_Browser(Scenario scenario) {
 
 
-		try {
-			file_rad.file_reader();
+        String filepath ="./download/";
 
-			if (Driver_manger.getDriver() == null) {
-
-				Driver_manger.lanuchbrowser(contText.app_name);
-				Driver_manger.getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
-
-			} else {
-				System.out.println("already the browser is opened sucessfully");
-			}
-
-		} catch (Exception e) {
-
-			e.getMessage();
-
-		}
+        currentScenario = scenario;
 
 
-	}
+        try {
+            file_rad.file_reader();
 
-	@After
-	public void afterScenario() {
-		if (Driver_manger.getDriver() != null) {
-			Driver_manger.getDriver().quit(); // Close browser
-			Driver_manger.setDriver(null); // Reset for next scenario
-		}
+            if (Driver_manger.getDriver() == null) {
 
-	}
+                Driver_manger.launchBrowser(BrowserName.CHROME,filepath);
+                Driver_manger.getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
 
-	// Save screenshot to local folder (offline backup)
-	/*
-	 * @AfterStep(order = 2) public void takescreenshot(Scenario d) {
-	 * 
-	 * if (d.isFailed()) {
-	 * 
-	 * try { File screenshotAs = ((TakesScreenshot)
-	 * Driver_manger.getDriver()).getScreenshotAs(OutputType.FILE); // Create folder
-	 * if it doesn’t exist File folder = new File("./Screenshots/local_view"); if
-	 * (!folder.exists()) { folder.mkdirs(); }
-	 * 
-	 * // Add timestamp to avoid overwriting String timestamp = new
-	 * SimpleDateFormat(" dd/MM/yyyy  HH-mm-ss").format(new Date()); String filename
-	 * = getScenarioName().replaceAll(" ", "_") + "_" + timestamp + ".png";
-	 * 
-	 * File destFile = new File(folder, filename); FileUtils.copyFile(screenshotAs,
-	 * destFile);
-	 * 
-	 * } catch (IOException e) { e.printStackTrace(); }
-	 * 
-	 * } }
-	 */
+            } else {
+                System.out.println("already the browser is opened sucessfully");
+            }
 
-	@AfterStep
-	public void takeScreenshotOnFailure(Scenario scenario) {
+        } catch (Exception e) {
 
-		if (scenario.isFailed()) {
-			try {
-				File srcFile = ((TakesScreenshot) Driver_manger.getDriver()).getScreenshotAs(OutputType.FILE);
+            System.err.println(e.getMessage()+"hook class error of browser luche");
 
-				// Create screenshot folder if not exists
-				File screenshotFolder = new File("./Screenshots/");
-				if (!screenshotFolder.exists()) {
-					screenshotFolder.mkdirs();
-				}
+        }
 
-				// Clean filename: no space, no colon
-				String scenarioName = getScenarioName().replaceAll(" ", "_");
-				String timestamp = new SimpleDateFormat("dd-MM-yyyy_HH-mm-ss").format(new Date());
-				String screenshotName = scenarioName + "_" + timestamp + ".png";
 
-				File destFile = new File(screenshotFolder, screenshotName);
-				FileUtils.copyFile(srcFile, destFile);
+    }
 
-				// Attach to Cucumber Report (optional, if HTML plugin supports it)
-				byte[] fileContent = FileUtils.readFileToByteArray(destFile);
-				scenario.attach(fileContent, "image/png", screenshotName);
+    @After
+    public void setup_down_Browser() {
+        if (Driver_manger.getDriver() != null) {
+            Driver_manger.getDriver().quit(); // Close browser
+            Driver_manger.setDriver(null); // Reset for next scenario
+        }
 
-			} catch (IOException e) {
-				e.printStackTrace();
-			}
-		}
-	}
+    }
+
+    // Save screenshot to local folder (offline backup)
+    /*
+     * @AfterStep(order = 2) public void takescreenshot(Scenario d) {
+     *
+     * if (d.isFailed()) {
+     *
+     * try { File screenshotAs = ((TakesScreenshot)
+     * Driver_manger.getDriver()).getScreenshotAs(OutputType.FILE); // Create folder
+     * if it doesn’t exist File folder = new File("./Screenshots/local_view"); if
+     * (!folder.exists()) { folder.mkdirs(); }
+     *
+     * // Add timestamp to avoid overwriting String timestamp = new
+     * SimpleDateFormat(" dd/MM/yyyy  HH-mm-ss").format(new Date()); String filename
+     * = getScenarioName().replaceAll(" ", "_") + "_" + timestamp + ".png";
+     *
+     * File destFile = new File(folder, filename); FileUtils.copyFile(screenshotAs,
+     * destFile);
+     *
+     * } catch (IOException e) { e.printStackTrace(); }
+     *
+     * } }
+     */
+
+    @AfterStep
+    public void takeScreenshotOnFailure(Scenario scenario) {
+
+        if (scenario.isFailed()) {
+            try {
+                File srcFile = ((TakesScreenshot) Driver_manger.getDriver()).getScreenshotAs(OutputType.FILE);
+
+                // Create screenshot folder if not exists
+                File screenshotFolder = new File("./Screenshots/");
+                if (!screenshotFolder.exists()) {
+                    screenshotFolder.mkdirs();
+                }
+
+                // Clean filename: no space, no colon
+                String scenarioName = getScenarioName().replaceAll(" ", "_");
+                String timestamp = new SimpleDateFormat("dd-MM-yyyy_HH-mm-ss").format(new Date());
+                String screenshotName = scenarioName + "_" + timestamp + ".png";
+
+                File destFile = new File(screenshotFolder, screenshotName);
+                FileUtils.copyFile(srcFile, destFile);
+
+                // Attach to Cucumber Report (optional, if HTML plugin supports it)
+                byte[] fileContent = FileUtils.readFileToByteArray(destFile);
+                scenario.attach(fileContent, "image/png", screenshotName);
+
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
 
 }
