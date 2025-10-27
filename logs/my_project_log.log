@@ -2,3 +2,9 @@
   C:\Users\DELL\AppData\Local\JetBrains\IntelliJIdea2025.2\temp-testng-customsuite.xml
 
 2025-10-27 12:55:28,615 [main] INFO  Helpers.Hooks - done
+2025-10-27 16:46:10,658 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Users\DELL\AppData\Local\JetBrains\IntelliJIdea2025.2\temp-testng-customsuite.xml
+
+2025-10-27 16:46:31,421 [main] INFO  Helpers.Hooks - ✅ Browser launched successfully.
+2025-10-27 16:46:43,414 [main] INFO  Helpers.Hooks - done
+2025-10-27 16:46:53,533 [main] INFO  Helpers.Hooks - ✅ Browser closed.

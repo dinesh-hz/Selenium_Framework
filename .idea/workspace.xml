@@ -6,9 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="9bd561ea-ebb8-4394-a3d9-a8fddf6afc31" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Helpers/Hooks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Helpers/Hooks.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/runners/Runner_Class.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/feature_files/login page.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/feature_files/login page.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HTML_Report/Spark.html" beforeDir="false" afterPath="$PROJECT_DIR$/HTML_Report/Spark.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PDF_Report/ExtentPdf.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/PDF_Report/ExtentPdf.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/my_project_log.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/my_project_log.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testng.xml" beforeDir="false" afterPath="$PROJECT_DIR$/testng.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
