@@ -17,31 +17,33 @@ pipeline {
         }
 
 
-        stage('Publish Cucumber Report') {
+        stage('Publish Cucumber JVM Report') {
             steps {
                 publishHTML(target: [
                     allowMissing: false,
                     alwaysLinkToLastBuild: true,
-                    keepAll: true,
-                    reportDir: 'target/cucumber-reports',
-                    reportFiles: 'report.html',
-                    reportName: 'Cucumber HTML Report'
+                    keepAll: true,   // ✅ Keeps reports from previous builds
+                    reportDir: 'target/cucumber-reports',  // ✅ Folder containing the report
+                    reportFiles: 'report.html',            // ✅ The report file itself
+                    reportName: 'Cucumber JVM HTML Report' // ✅ Display name in Jenkins
                 ])
             }
         }
+
 
         stage('Publish Extent Report') {
             steps {
                 publishHTML(target: [
                     allowMissing: false,
                     alwaysLinkToLastBuild: true,
-                    keepAll: true,
-                    reportDir: '/HTML_Report',   // or target/extent-report (check actual folder)
-                    reportFiles: 'Spark.html',          // or extent.html if that’s your file
-                    reportName: 'Extent HTML Report'
+                    keepAll: true,   // keeps old reports for reference
+                    reportDir: 'HTML_Report',   // ✅ folder where Spark.html is located
+                    reportFiles: 'Spark.html',  // ✅ actual report file name
+                    reportName: 'Extent Spark HTML Report'
                 ])
             }
         }
+
 
     }
 }
