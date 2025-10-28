@@ -17,34 +17,7 @@ pipeline {
         }
 
 
-        stage('Publish Reports') {   // 👇 Cucumber JVM Report
-            steps {
-                publishHTML(target: [
-                    allowMissing: false,
-                    alwaysLinkToLastBuild: true,
-                    keepAll: true,
-                    reportDir: 'target/cucumber-html-reports',
-                    reportFiles: 'overview-features.html',
-                    reportName: 'Cucumber JVM Report'
-                ])
-            }
-        }
-
-
-         stage('Publish Extent Report') {       // 👇 Added this new stage Extent Report
-                    steps {
-                        publishHTML(target: [
-                            allowMissing: false,
-                            alwaysLinkToLastBuild: true,
-                            keepAll: true,  // to keep past old Report
-                            reportDir: 'target/extent-reports',
-                            reportFiles: 'extent.html',
-                            reportName: 'Extent HTML Report'
-                        ])
-                    }
-                }
-
-        /*   stage('Publish Reports') {   // 👇 Added this new stage cucumber HTML Report
+        stage('Publish Cucumber Report') {
             steps {
                 publishHTML(target: [
                     allowMissing: false,
@@ -55,6 +28,20 @@ pipeline {
                     reportName: 'Cucumber HTML Report'
                 ])
             }
-        }*/
+        }
+
+        stage('Publish Extent Report') {
+            steps {
+                publishHTML(target: [
+                    allowMissing: false,
+                    alwaysLinkToLastBuild: true,
+                    keepAll: true,
+                    reportDir: '/HTML_Report',   // or target/extent-report (check actual folder)
+                    reportFiles: 'Spark.html',          // or extent.html if that’s your file
+                    reportName: 'Extent HTML Report'
+                ])
+            }
+        }
+
     }
 }
