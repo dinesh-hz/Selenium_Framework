@@ -23,8 +23,8 @@ pipeline {
                     allowMissing: false,
                     alwaysLinkToLastBuild: true,
                     keepAll: true,   // ✅ Keeps reports from previous builds
-                    reportDir: 'target/cucumber-reports',  // ✅ Folder containing the report
-                    reportFiles: 'report.html',            // ✅ The report file itself
+                    reportDir: 'target/cucumber-reports/cucumber-html-reports',  // ✅ Folder containing the report
+                    reportFiles: 'overview-features.html',            // ✅ The report file itself
                     reportName: 'Cucumber JVM HTML Report' // ✅ Display name in Jenkins
                 ])
             }
