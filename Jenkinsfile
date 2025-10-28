@@ -44,6 +44,19 @@ pipeline {
             }
         }
 
+       /* stage('Publish Cucumber Report') {
+            steps {
+                publishHTML(target: [
+                    allowMissing: false,
+                    alwaysLinkToLastBuild: true,
+                    keepAll: true,
+                    reportDir: 'target/cucumber-reports',
+                    reportFiles: 'report.html',
+                    reportName: 'Cucumber HTML Report for 24hur'
+                ])
+            }
+        }*/
+
 
     }
 }

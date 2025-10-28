@@ -1,45 +1,13 @@
-2025-10-27 12:55:01,792 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+2025-10-28 12:13:35,148 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
   C:\Users\DELL\AppData\Local\JetBrains\IntelliJIdea2025.2\temp-testng-customsuite.xml
 
-2025-10-27 12:55:28,615 [main] INFO  Helpers.Hooks - done
-2025-10-27 16:46:10,658 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+2025-10-28 12:39:24,284 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
   C:\Users\DELL\AppData\Local\JetBrains\IntelliJIdea2025.2\temp-testng-customsuite.xml
 
-2025-10-27 16:46:31,421 [main] INFO  Helpers.Hooks - ✅ Browser launched successfully.
-2025-10-27 16:46:43,414 [main] INFO  Helpers.Hooks - done
-2025-10-27 16:46:53,533 [main] INFO  Helpers.Hooks - ✅ Browser closed.
-2025-10-27 22:24:28,670 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
-  C:\Users\DELL\AppData\Local\JetBrains\IntelliJIdea2025.2\temp-testng-customsuite.xml
-
-2025-10-27 22:24:44,059 [main] INFO  Helpers.Hooks - ✅ Browser launched successfully.
-2025-10-27 22:24:49,533 [main] INFO  Helpers.Hooks - done
-2025-10-27 22:24:58,892 [main] INFO  Helpers.Hooks - ✅ Browser closed.
-2025-10-27 22:26:23,771 [main] INFO  Helpers.Hooks - ✅ Browser launched successfully.
-2025-10-27 22:26:25,223 [main] INFO  Helpers.Hooks - done
-2025-10-27 22:26:37,964 [main] INFO  Helpers.Hooks - ✅ Browser closed.
-2025-10-27 22:36:16,924 [main] INFO  Helpers.Hooks - ✅ Browser launched successfully.
-2025-10-27 22:36:21,658 [main] INFO  Helpers.Hooks - done
-2025-10-27 22:36:32,582 [main] INFO  Helpers.Hooks - ✅ Browser closed.
-2025-10-27 22:40:56,658 [main] INFO  Helpers.Hooks - ✅ Browser launched successfully.
-2025-10-27 22:41:01,472 [main] INFO  Helpers.Hooks - done
-2025-10-27 22:41:11,673 [main] INFO  Helpers.Hooks - ✅ Browser closed.
-2025-10-27 22:50:31,700 [main] INFO  Helpers.Hooks - ✅ Browser launched successfully.
-2025-10-27 22:50:39,174 [main] INFO  Helpers.Hooks - done
-2025-10-27 22:50:49,873 [main] INFO  Helpers.Hooks - ✅ Browser closed.
-2025-10-27 22:52:52,765 [main] INFO  Helpers.Hooks - ✅ Browser launched successfully.
-2025-10-27 22:52:58,077 [main] INFO  Helpers.Hooks - done
-2025-10-27 22:53:07,935 [main] INFO  Helpers.Hooks - ✅ Browser closed.
-2025-10-27 22:53:33,820 [Report.CucumberJVMReportGenerator.main()] INFO  net.masterthought.cucumber.ReportParser - File 'target/cucumber-reports/cucumber.json' contains 1 feature(s)
-2025-10-27 22:55:05,516 [main] INFO  Helpers.Hooks - ✅ Browser launched successfully.
-2025-10-27 22:55:10,784 [main] INFO  Helpers.Hooks - done
-2025-10-27 22:55:22,605 [main] INFO  Helpers.Hooks - ✅ Browser closed.
-2025-10-27 22:56:36,274 [main] INFO  Helpers.Hooks - ✅ Browser launched successfully.
-2025-10-27 22:56:41,237 [main] INFO  Helpers.Hooks - done
-2025-10-27 22:56:54,547 [main] INFO  Helpers.Hooks - ✅ Browser closed.
-2025-10-27 23:01:42,953 [main] INFO  Helpers.Hooks - ✅ Browser launched successfully.
-2025-10-27 23:01:48,305 [main] INFO  Helpers.Hooks - done
-2025-10-27 23:01:59,840 [main] INFO  Helpers.Hooks - ✅ Browser closed.
-2025-10-27 23:02:15,310 [Report.CucumberJVMReportGenerator.main()] INFO  net.masterthought.cucumber.ReportParser - File 'target/cucumber-reports/cucumber.json' contains 1 feature(s)
-2025-10-27 23:07:09,572 [main] INFO  Helpers.Hooks - ✅ Browser launched successfully.
-2025-10-27 23:07:14,331 [main] INFO  Helpers.Hooks - done
-2025-10-27 23:07:25,241 [main] INFO  Helpers.Hooks - ✅ Browser closed.
+2025-10-28 12:39:42,392 [main] INFO  Helpers.Hooks - ✅ Browser launched successfully.
+2025-10-28 12:40:03,132 [main] INFO  Helpers.Hooks - done
+2025-10-28 12:40:31,818 [main] INFO  Helpers.Hooks - ✅ Browser closed.
+2025-10-28 12:48:26,242 [main] INFO  Helpers.Hooks - ✅ Browser launched successfully.
+2025-10-28 12:48:32,017 [main] INFO  Helpers.Hooks - done
+2025-10-28 12:48:42,473 [main] INFO  Helpers.Hooks - ✅ Browser closed.
+2025-10-28 12:49:07,250 [Report.CucumberJVMReportGenerator.main()] INFO  net.masterthought.cucumber.ReportParser - File 'target/cucumber-reports/cucumber.json' contains 1 feature(s)

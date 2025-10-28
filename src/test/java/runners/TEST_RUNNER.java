@@ -29,10 +29,13 @@ import org.junit.runner.RunWith;
 )
 public class TEST_RUNNER extends AbstractTestNGCucumberTests {
 
-    // mvn test ---->only run test without Generates Reports
-    // mvn clean ---->Deletes all existing files
-    //mvn verify ----->Generates all Reports
-    // mvn clean test ----> Cleans old data, then runs all tests fresh (no reports yet).
-    //mvn clean test verify ----> Full workflow: cleans old data → runs tests → generates all reports.
+         /* | Command              | Meaning
+            | -------------------- | --------------------------------------------------------------------------------------- |
+            | `mvn test`           | Runs test cases only                                                                    |
+            | `mvn clean`          | Deletes old reports, target folder                                                      |
+            | `mvn verify`         | Runs tests **and generates reports** (Cucumber, Extent, etc.)                           |
+            | `mvn clean test`     | Cleans old files → Runs tests fresh                                                     |
+            | `mvn clean verify` ✅| **Cleans old → Runs all tests → Generates all reports (Cucumber, Extent, Spark, etc.)** |
+*/
 
 }
