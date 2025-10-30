@@ -9,25 +9,22 @@ import io.cucumber.java.en.When;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.testng.Assert;
-import page_actions.Forgotpage;
-import page_actions.Homepage;
-import page_actions.LoginPage;
+import page_actions.Forgotpage_Action;
+import page_actions.Homepage_Action;
+import page_actions.LoginPage_Action;
 import utilities.Bass_Class;
 import utilities.contText;
-
-import java.util.List;
-import java.util.Map;
 
 public class LoginPageDefinitions {
 
     protected static final Logger logger = LogManager.getLogger(Hooks.class);
 
-    LoginPage LoginPage = new LoginPage();
+    LoginPage_Action LoginPage = new LoginPage_Action();
 
-    Forgotpage ForgetPage = new Forgotpage();
+    Forgotpage_Action ForgetPage = new Forgotpage_Action();
 
 
-    Homepage Homepage = new Homepage();
+    Homepage_Action Homepage = new Homepage_Action();
 
     @Given("user is on the login page")
     public void user_is_on_the_login_page() {

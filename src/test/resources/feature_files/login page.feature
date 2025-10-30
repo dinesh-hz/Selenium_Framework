@@ -1,4 +1,4 @@
-@try
+#@try
 Feature: login page
 
 

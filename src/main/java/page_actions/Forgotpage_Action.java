@@ -3,7 +3,7 @@ package page_actions;
 import Page_locators.Forgot_Locaters;
 import utilities.Bass_Class;
 
-public class Forgotpage extends Bass_Class {
+public class Forgotpage_Action extends Bass_Class {
 
 	Forgot_Locaters forget = new Forgot_Locaters();
 	

@@ -4,7 +4,7 @@ import Page_locators.Home_Locaters;
 import Page_locators.Login_Locaters;
 import utilities.Bass_Class;
 
-public class LoginPage extends Bass_Class {
+public class LoginPage_Action extends Bass_Class {
 
     private final Home_Locaters homeLocators = new Home_Locaters();
     private final Login_Locaters loginLocators = new Login_Locaters();

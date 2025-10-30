@@ -1,14 +1,10 @@
 package page_actions;
 
-import Page_locators.Login_Locaters;
-import org.openqa.selenium.support.PageFactory;
-
 import Page_locators.Singup_Locaters;
 import utilities.Bass_Class;
-import utilities.Driver_manger;
 import utilities.contText;
 
-public class SingupPage extends Bass_Class {
+public class SingupPage_Action extends Bass_Class {
 
 
 	Singup_Locaters locters = new Singup_Locaters();
