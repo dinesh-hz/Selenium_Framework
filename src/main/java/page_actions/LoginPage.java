@@ -1,108 +1,111 @@
 package page_actions;
 
+import Page_locators.Home_Locaters;
 import Page_locators.Login_Locaters;
-import org.openqa.selenium.NoSuchElementException;
-import org.testng.Assert;
 import utilities.Bass_Class;
-
 
 public class LoginPage extends Bass_Class {
 
-
-    Login_Locaters Locators = new Login_Locaters();
-
-
-    /// ////////////////////////////////////////////////////
-    public void entreusername(String usernmae) {
+    private final Home_Locaters homeLocators = new Home_Locaters();
+    private final Login_Locaters loginLocators = new Login_Locaters();
 
 
+    public void enterUsername(String username) {
         try {
-            Locators.username.sendKeys(usernmae);
-            //Locators.username.sendKeys(getCellData(2,2);
+            loginLocators.username.click();
+            loginLocators.username.clear();
+            waitForSeconds(1);
+            loginLocators.username.sendKeys(username);
         } catch (Exception e) {
-            handleException(e, "Username field not found due to incorrect XPath.");
+            handleException(e, "Unable to locate or interact with the username field.");
         }
-
     }
 
-    public void entrepassword(String password) {
 
-        Locators.password.sendKeys(password);
-
+    public void enterPassword(String password) {
+        try {
+            loginLocators.password.clear();
+            waitForSeconds(1);
+            loginLocators.password.sendKeys(password);
+        } catch (Exception e) {
+            handleException(e, "Unable to locate or interact with the password field.");
+        }
     }
 
-    public void clicklogin_button() {
 
-        Locators.login_btn.click();
+    public void clickLoginButton() {
+        loginLocators.login_btn.click();
     }
 
-    public void click_forgot_button() {
 
-        Locators.Forgotpassword.click();
+    public void clickForgotPasswordLink() {
+        loginLocators.Forgotpassword.click();
     }
 
-    public String isverifyforgotpagehome() {
 
-        return Locators.verifyforgotpage.getText();
+    public boolean isDashboardVisible() {
+        return ElementDisplay(homeLocators.Dashboard, ElementStatus.isDisplayed);
     }
 
-    public boolean verifyUsernameBoxVisibility() {
 
-        return ElementDisplay(Locators.username, ElementStatus.isDisplayed);
-
+    public boolean isUsernameBoxVisible() {
+        return ElementDisplay(loginLocators.username, ElementStatus.isDisplayed);
     }
 
-    public boolean verifyUsernameBoxisenabled() {
 
-
-        return ElementDisplay(Locators.username, ElementStatus.isEnabled);
-
+    public boolean isUsernameBoxEnabled() {
+        return ElementDisplay(loginLocators.username, ElementStatus.isEnabled);
     }
 
-    public boolean verifypasswordBoxVisibility() {
-        return ElementDisplay(Locators.username, ElementStatus.isDisplayed);
 
-
+    public boolean isPasswordBoxVisible() {
+        return ElementDisplay(loginLocators.password, ElementStatus.isDisplayed);
     }
 
-    public boolean verifypasswordBoxisenabled() {
 
-
-        return ElementDisplay(Locators.password, ElementStatus.isEnabled);
-
-
+    public boolean isPasswordBoxEnabled() {
+        return ElementDisplay(loginLocators.password, ElementStatus.isEnabled);
     }
 
-    public String verifyRequiredusernameerror() {
 
-        return Locators.Requirederror_username_mesg.getText();
-
+    public String getUsernameRequiredErrorText() {
+        return loginLocators.Requirederror_username_mesg.getText();
     }
 
-    public String verifyRequiredpassworderror() {
 
-        return Locators.Requirederror_password_mesg.getText();
-
+    public String getPasswordRequiredErrorText() {
+        return loginLocators.Requirederror_password_mesg.getText();
     }
 
-    public String verify_Invalid_errormessage() {
 
-        return Locators.Invaliderror_mesg.getText();
-
+    public boolean isInvalidErrorMessageDisplayed() {
+        Bass_Class.waitForSeconds(5);
+        return loginLocators.Invaliderror_mesg.isDisplayed();
     }
 
-    public boolean isverifyloginbuttondisplay() {
 
-        return ElementDisplay(Locators.login_btn, ElementStatus.isDisplayed);
-
+    public String getInvalidErrorMessage() {
+        return loginLocators.Invaliderror_mesg.getText();
     }
 
-    public boolean isverifyloginbuttonenable_or_disable() {
 
-
-        return ElementDisplay(Locators.login_btn, ElementStatus.isEnabled);
-
-
+    public boolean isLoginButtonVisible() {
+        return ElementDisplay(loginLocators.login_btn, ElementStatus.isDisplayed);
     }
 
+
+    public boolean isLoginButtonEnabled() {
+        return ElementDisplay(loginLocators.login_btn, ElementStatus.isEnabled);
+    }
+
+
+    public void logoutUser() {
+        try {
+            loginLocators.logmanu.click();
+            waitForSeconds(2);
+            loginLocators.Logout_buton.click();
+        } catch (Exception e) {
+            handleException(e, "Failed to perform logout operation.");
+        }
+    }
 }

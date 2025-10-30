@@ -1,5 +1,6 @@
 package page_actions;
 
+import Page_locators.Login_Locaters;
 import org.openqa.selenium.support.PageFactory;
 
 import Page_locators.Singup_Locaters;
@@ -8,20 +9,10 @@ import utilities.Driver_manger;
 import utilities.contText;
 
 public class SingupPage extends Bass_Class {
-	
-	
-	Singup_Locaters locters = null;
-	
-	public SingupPage() {
-		
-		this.locters=new Singup_Locaters();
-		
-        PageFactory.initElements(Driver_manger.getDriver(),locters);
 
-	}
-	
-	
-	
+
+	Singup_Locaters locters = new Singup_Locaters();
+
 	public void filluptheNewSinguppage() throws InterruptedException {
 		
 		locters.Createaccount_btn.click();

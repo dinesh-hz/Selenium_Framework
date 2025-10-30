@@ -8,9 +8,7 @@ import utilities.Driver_manger;
 
 public class Home_Locaters {
 	
-	
-	
-	
+
 	public Home_Locaters() {
         PageFactory.initElements(Driver_manger.getDriver(), this);
 

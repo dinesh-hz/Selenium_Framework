@@ -5,13 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9bd561ea-ebb8-4394-a3d9-a8fddf6afc31" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/logs/2025-10/app-10-27-2025-1.log.gz" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HTML_Report/Spark.html" beforeDir="false" afterPath="$PROJECT_DIR$/HTML_Report/Spark.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Jenkinsfile" beforeDir="false" afterPath="$PROJECT_DIR$/Jenkinsfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PDF_Report/ExtentPdf.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/PDF_Report/ExtentPdf.pdf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/my_project_log.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/my_project_log.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/runners/TEST_RUNNER.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/runners/TEST_RUNNER.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Page_locators/Forgot_Locaters.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Page_locators/Forgot_Locaters.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Page_locators/Home_Locaters.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Page_locators/Home_Locaters.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Page_locators/Login_Locaters.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Page_locators/Login_Locaters.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/page_actions/Forgotpage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/page_actions/Forgotpage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/page_actions/Homepage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/page_actions/Homepage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/page_actions/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/page_actions/LoginPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/page_actions/SingupPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/page_actions/SingupPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/StepDefinition/LoginPageDefinitions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/StepDefinition/LoginPageDefinitions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/StepDefinition/SingupPageDefinitions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/StepDefinition/SingupPageDefinitions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/runners/TEST_RUNNER.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/runners/TestRunner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/feature_files/login page.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/feature_files/login page.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/feature_files/signup.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/feature_files/signup.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testng.xml" beforeDir="false" afterPath="$PROJECT_DIR$/testng.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,6 +92,7 @@
     "TestNG.Example_with_External_Data_Source.loginTest.executor": "Run",
     "TestNG.Runner_Class.executor": "Run",
     "TestNG.TEST_RUNNER.executor": "Run",
+    "TestNG.TestRunner.executor": "Run",
     "TestNG.Test_run.loginTest.executor": "Run",
     "TestNG.Test_run_stepcode.executor": "Run",
     "TestNG.Test_run_stepcode.loginTest.executor": "Run",
@@ -89,7 +101,7 @@
     "TestNG.fxdvhuj.loginTest.executor": "Run",
     "deletionFromPopupRequiresConfirmation": "false",
     "full.screen.before.presentation.mode": "true",
-    "git-widget-placeholder": "singupPage",
+    "git-widget-placeholder": "feature/login-page",
     "kotlin-language-version-configured": "true",
     "last_directory_selection": "C:/Users/DELL/Downloads/Orange_Poratel/src/test/java",
     "last_opened_file_path": "C:/Users/DELL/Downloads/partice_server/runover",
@@ -116,7 +128,7 @@
       <recent name="runners" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.TEST_RUNNER">
+  <component name="RunManager" selected="TestNG.TestRunner">
     <configuration name="Duummyforselenium" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="utilities.Duummyforselenium" />
       <module name="serveer" />
@@ -188,16 +200,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Test_run.loginTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="TestRunner" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="serveer" />
       <shortenClasspath name="NONE" />
       <useClassPathOnly />
       <option name="SUITE_NAME" value="" />
-      <option name="PACKAGE_NAME" value="Dataprovider_for_excell_source" />
-      <option name="MAIN_CLASS_NAME" value="Dataprovider_for_excell_source.Test_run" />
-      <option name="METHOD_NAME" value="loginTest" />
+      <option name="PACKAGE_NAME" value="runners" />
+      <option name="MAIN_CLASS_NAME" value="runners.TestRunner" />
       <option name="GROUP_NAME" value="" />
-      <option name="TEST_OBJECT" value="METHOD" />
+      <option name="TEST_OBJECT" value="CLASS" />
       <option name="PARAMETERS" value="" />
       <option name="OUTPUT_DIRECTORY" value="C:\Users\DELL\Downloads\partice_server\runover\src\test\java\runners" />
       <option name="TEST_SEARCH_SCOPE">
@@ -232,11 +243,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.TestRunner" />
         <item itemvalue="TestNG.TEST_RUNNER" />
         <item itemvalue="Application.Duummyforselenium" />
         <item itemvalue="Application.StringExample" />
         <item itemvalue="TestNG.Runner_Class" />
-        <item itemvalue="TestNG.Test_run.loginTest" />
       </list>
     </recent_temporary>
   </component>

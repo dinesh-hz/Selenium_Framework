@@ -2,7 +2,7 @@
 <suite name="TestSuite">
     <test name="TestRunner">
         <classes>
-            <class name="runners.TEST_RUNNER"/>
+            <class name="runners.TestRunner"/>
         </classes>
     </test>
 </suite>

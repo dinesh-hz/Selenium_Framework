@@ -1,12 +1,13 @@
 package page_actions;
 
-import org.testng.Assert;
-
 import Page_locators.Forgot_Locaters;
+import utilities.Bass_Class;
 
-public class Forgotpage extends Forgot_Locaters{
+public class Forgotpage extends Bass_Class {
+
+	Forgot_Locaters forget = new Forgot_Locaters();
 	
-	public static Forgotpage getinstenen;
+/*	public static Forgotpage getinstenen;
 
 	public Forgotpage() {
 
@@ -19,13 +20,18 @@ public class Forgotpage extends Forgot_Locaters{
 		}
 
 		return getinstenen;
-	}
-	
-	public void verify_forgot_passwordpage(String home) {
-		
-		String text = getReset_password_Text().getText();
+	}*/
 
-		Assert.assertEquals(text, home, "forgotpage is not visbility");
+	public boolean isResetPasswordHeadingVisible() {
+
+		 return forget.reset_password_Text.isDisplayed();
+
 	}
+
+	public String getResetPasswordHeadingText() {
+		return forget.reset_password_Text.getText();
+	}
+
+
 
 }

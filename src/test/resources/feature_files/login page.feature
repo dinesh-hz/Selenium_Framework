@@ -1,17 +1,22 @@
-#@try
+@try
 Feature: login page
-   
-   
+
+
   Background: user can open browser to be in the web page
     Given user is on the login page
 
-  @try
-  Scenario: verify login with a valid credentials
-    Given user entre the valid username and password
-      | username | Admin    |
-      | password | admin123 |
+
+  Scenario Outline: verify login with a valid credentials
+    Given user entre the valid "<username>" and "<password>"
     Then user click the login button
-    And user should see homepage "Dashboard"
+    And user should see homepage
+    Then user should logout
+
+    Examples:
+      | username | password |
+      | admin    | admin123 |
+      | ADMIN    | admin123 |
+
 
   Scenario: verify login with an invalid credentials
     Given user entre the invalid username and password
@@ -54,12 +59,19 @@ Feature: login page
     Given user click the Forgot Password link
     Then user should go Forgot Password page "Reset Password"
 
-  Scenario: verify login when username is Case Sensitivity
-    Given user entre the username is uses different case sensitivity
-      | username | admin |
-      | username | ADMIN |
-    When user entre the vaild password
-    Then clcik login button
+
+  Scenario: Verify login with lowercase username for casesenictive
+    Given user entre the username "admin" and password "admin123"
+    Then user click the login button
+    And user should not go to the homepage
+
+
+  Scenario: Verify login with uppercase username for  casesenictive
+    Given user entre the username  and password
+      | username | ADMIN    |
+      | password | admin123 |
+    Then user click the login button
+    And user should not go to the homepage
 
   Scenario: verify Login button is  Disabled before entre credentials
     Given user does not entre anything
@@ -79,8 +91,8 @@ Feature: login page
     When user click the login button
     Then user should see an error message "Invalid credentials"
 
-    Examples: 
+    Examples:
       | password |
-      |    12345 |
-      |    67890 |
+      | 12345    |
+      | 67890    |
       | 22031997 |

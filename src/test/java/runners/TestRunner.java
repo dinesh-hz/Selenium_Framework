@@ -1,10 +1,8 @@
 package runners;
 
-import io.cucumber.junit.Cucumber;
 
 import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
-import org.junit.runner.RunWith;
 
 // this is only run for junit test from junit pakges
 //@RunWith(Cucumber.class)
@@ -27,7 +25,7 @@ import org.junit.runner.RunWith;
         tags = ("@try")
 
 )
-public class TEST_RUNNER extends AbstractTestNGCucumberTests {
+public class TestRunner extends AbstractTestNGCucumberTests {
 
          /* | Command              | Meaning
             | -------------------- | --------------------------------------------------------------------------------------- |
@@ -35,7 +33,7 @@ public class TEST_RUNNER extends AbstractTestNGCucumberTests {
             | `mvn clean`          | Deletes old reports, target folder                                                      |
             | `mvn verify`         | Runs tests **and generates reports** (Cucumber, Extent, etc.)                           |
             | `mvn clean test`     | Cleans old files → Runs tests fresh                                                     |
-            | `mvn clean verify` ✅| **Cleans old → Runs all tests → Generates all reports (Cucumber, Extent, Spark, etc.)** |
+            | `mvn clean verify` | **Cleans old → Runs all tests → Generates all reports (Cucumber, Extent, Spark, etc.)** |
 */
 
 }

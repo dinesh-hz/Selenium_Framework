@@ -15,7 +15,6 @@ public class Login_Locaters {
 
 	//----static elements--->
 
-
 	public Login_Locaters() {
 		// ✅ Initialize all @FindBy elements using driver from DriverManager
 		PageFactory.initElements(getDriver(), this);
@@ -35,7 +34,9 @@ public class Login_Locaters {
 
 	@FindBy(xpath = "//p[text()='Forgot your password? ']")
 	public WebElement Forgotpassword;
-	
+
+	@FindBy(xpath = "//span[@class=\"oxd-userdropdown-tab\"]")
+	public WebElement logmanu;
 	
 	
 	@FindBy(xpath = "//h6[text()='Reset Password']")
@@ -53,5 +54,8 @@ public class Login_Locaters {
 
 	@FindBy(xpath = "//*[@id=\"app\"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[2]/div/span")
 	public WebElement Requirederror_password_mesg;
-	
+
+	@FindBy(xpath = "//a[text()=\"Logout\"]")
+	public WebElement Logout_buton;
+
 }
