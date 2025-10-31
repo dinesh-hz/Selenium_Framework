@@ -6,13 +6,19 @@
   <component name="ChangeListManager">
     <list default="true" id="9bd561ea-ebb8-4394-a3d9-a8fddf6afc31" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/page_actions/Forgotpage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/page_actions/Forgotpage_Action.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/page_actions/Homepage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/page_actions/Homepage_Action.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/page_actions/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/page_actions/LoginPage_Action.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/page_actions/SingupPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/page_actions/SingupPage_Action.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/StepDefinition/LoginPageDefinitions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/StepDefinition/LoginPageDefinitions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HTML_Report/Spark.html" beforeDir="false" afterPath="$PROJECT_DIR$/HTML_Report/Spark.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PDF_Report/ExtentPdf.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/PDF_Report/ExtentPdf.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/my_project_log.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/my_project_log.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Page_locators/Singup_Locaters.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Page_locators/Singup_Locaters.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/page_actions/SingupPage_Action.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/page_actions/SingupPage_Action.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/utilities/Bass_Class.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utilities/Bass_Class.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/utilities/Driver_manger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utilities/Driver_manger.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/utilities/Fileread_Manager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utilities/Fileread_Manager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/utilities/contText.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utilities/contText.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Helpers/Hooks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Helpers/Hooks.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/StepDefinition/SingupPageDefinitions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/StepDefinition/SingupPageDefinitions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/feature_files/login page.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/feature_files/login page.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/config.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/feature_files/signup.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/feature_files/signup.feature" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +31,9 @@
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="FormatOnSaveOptions">
+    <option name="myRunOnSave" value="true" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -43,6 +52,9 @@
   </component>
   <component name="MavenRunner">
     <option name="jreName" value="ms-11" />
+  </component>
+  <component name="OptimizeOnSaveOptions">
+    <option name="myRunOnSave" value="true" />
   </component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
@@ -64,6 +76,7 @@
     "Application.ExcelUtil_simple_tyepe.executor": "Run",
     "Application.Excel_Util.executor": "Run",
     "Application.StringExample.executor": "Run",
+    "Cucumber Java.Scenario: verify the add new user.executor": "Run",
     "Downloaded.Files.Path.Enabled": "true",
     "JUnit.Cucumber_Runner.executor": "Run",
     "JUnit.Runner_Class.executor": "Run",
@@ -91,7 +104,8 @@
     "TestNG.fxdvhuj.loginTest.executor": "Run",
     "deletionFromPopupRequiresConfirmation": "false",
     "full.screen.before.presentation.mode": "true",
-    "git-widget-placeholder": "feature/login-page",
+    "git-widget-placeholder": "feature/signup-page",
+    "ignore.preview.features.used": "true",
     "kotlin-language-version-configured": "true",
     "last_directory_selection": "C:/Users/DELL/Downloads/Orange_Poratel/src/test/java",
     "last_opened_file_path": "C:/Users/DELL/Downloads/partice_server/runover",
@@ -103,9 +117,10 @@
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.3678161",
+    "rearrange.code.on.save": "true",
     "run.code.analysis.last.selected.profile": "pProject Default",
     "settings.build.tools.auto.reload": "ALL",
-    "settings.editor.selected.configurable": "advanced.settings",
+    "settings.editor.selected.configurable": "settings.saveactions",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -133,38 +148,24 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Scenario: verify the add new user" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="7" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/feature_files/signup.feature" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+      <module name="serveer" />
+      <option name="NAME_FILTER" value="^verify the add new user$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin teamcity --name &quot;^verify the add new user$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: verify the add new user" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <module name="runover" />
       <option name="MAIN_CLASS_NAME" value="" />
       <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Runner_Class" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="serveer" />
-      <shortenClasspath name="NONE" />
-      <useClassPathOnly />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="runners.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="SUITE_NAME" value="" />
-      <option name="PACKAGE_NAME" value="runners" />
-      <option name="MAIN_CLASS_NAME" value="runners.Runner_Class" />
-      <option name="GROUP_NAME" value="" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <option name="PARAMETERS" value="" />
-      <option name="OUTPUT_DIRECTORY" value="C:\Users\DELL\Downloads\partice_server\runover\src\test\java\runners" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <option name="PROPERTIES_FILE" value="" />
-      <properties />
-      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -235,9 +236,9 @@
       <list>
         <item itemvalue="TestNG.TestRunner" />
         <item itemvalue="TestNG.TEST_RUNNER" />
-        <item itemvalue="Application.Duummyforselenium" />
+        <item itemvalue="Cucumber Java.Scenario: verify the add new user" />
         <item itemvalue="Application.StringExample" />
-        <item itemvalue="TestNG.Runner_Class" />
+        <item itemvalue="Application.Duummyforselenium" />
       </list>
     </recent_temporary>
   </component>

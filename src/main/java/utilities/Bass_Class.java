@@ -3,7 +3,8 @@ package utilities;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.*;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 
 import java.io.File;
 import java.io.IOException;
@@ -16,14 +17,7 @@ import java.util.Set;
 
 public class Bass_Class extends Driver_manger {
 
-    // ✅ Custom Runtime Exception (can be nested) for findelement
-    public static class FrameworkElementNotFoundException extends RuntimeException {
-        public FrameworkElementNotFoundException(String message, Throwable cause) {
-            super(message, cause);
-        }
-    }
-
-    /// ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    // private static WebElement highlightedElement;
 
     //------>Expilt wait----//
     public static WebElement waitForVisibility(By locator) {
@@ -53,6 +47,11 @@ public class Bass_Class extends Driver_manger {
         }
     }
 
+    /// ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    public static void set_URL(String APPURL) {
+
+        getDriver().get(APPURL);
+    }
 
     //(Fluent Wait)
    /* public static WebElement waitForelementLocter(By locator, int timeout, int pollingTime) {
@@ -62,13 +61,6 @@ public class Bass_Class extends Driver_manger {
                 .ignoring(NoSuchElementException.class);
         return fluentWait.until(ExpectedConditions.visibilityOfElementLocated(locator));
     }*/
-
-    /// ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    public static void set_URL(String APPURL) {
-
-        getDriver().get(APPURL);
-
-    }
 
     public static List<WebElement> findElements(By locator) {
         return getDriver().findElements(locator);
@@ -91,18 +83,11 @@ public class Bass_Class extends Driver_manger {
         }
     }
 
-    public enum NavigationType {
-        BACK,
-        FORWARD,
-        REFRESH
-    }
-
     /// ////////////////////////////////////////////////////////////////////////////////////////////
     public static void navigateToURL(String url) {
 
         getDriver().navigate().to(url);
     }
-
 
     public static void sendKeys(WebElement element, String text) {
         try {
@@ -136,14 +121,6 @@ public class Bass_Class extends Driver_manger {
         }
     }
 
-    public enum Dropdowntype {
-
-        index,
-        value,
-        text
-
-    }
-
     public static boolean isMultipleSelect(WebElement element) {
         try {
             Select select = new Select(element);
@@ -174,13 +151,10 @@ public class Bass_Class extends Driver_manger {
             connection.setRequestMethod("HEAD");
             int statusCode = connection.getResponseCode();
 
-            if (statusCode >= 400) {
-                //    System.err.println("❌ Broken URL: " + src + " | Status: " + statusCode);
-                return true;
-            }
+            //    System.err.println("❌ Broken URL: " + src + " | Status: " + statusCode);
+            return statusCode >= 400;
 
             //  System.out.println("✅ Valid Image: " + src + " | Status: " + statusCode);
-            return false;
 
         } catch (Exception e) {
             handleException(e, "Error verifying image element.");
@@ -188,11 +162,9 @@ public class Bass_Class extends Driver_manger {
         }
     }
 
-
     // ✅ Mouse and Actions
     public static void mouseoverAndClick(WebElement element) {
         new Actions(getDriver()).moveToElement(element).click().perform();
-
     }
 
     public static void mouseoverAndClickRight(WebElement element) {
@@ -204,7 +176,6 @@ public class Bass_Class extends Driver_manger {
 
     public static void mouseoverreles(WebElement element) {
         new Actions(getDriver()).moveToElement(element).release().perform();
-
     }
 
     public static void dragAndDrop(WebElement source, WebElement target) {
@@ -238,17 +209,6 @@ public class Bass_Class extends Driver_manger {
         }
     }
 
-
-    public enum LocatorType {
-        ID,
-        CLASS_NAME,
-        NAME,
-        XPATH,
-        TAG_NAME,
-        CSS_SELECTOR
-    }
-
-
     /// ////////////////////////////////////////////////////////////////////////////////////////////////////////
     //✅ Alerts handler using enum
     public static String Alertshandle(AlertAction action) {
@@ -275,26 +235,16 @@ public class Bass_Class extends Driver_manger {
                     System.err.println("⚠️ Unknown alert action: " + action);
                     break;
             }
-
         } catch (Exception e) {
             handleException(e, "⚠️ No alert found to handle");
         }
         return null;
     }
 
-
-    // ✅ Enum for alert actions
-    public enum AlertAction {
-        ACCEPT,
-        DISMISS,
-        GET_TEXT
-    }
-
     /// ////////////////////////////////////////////////////////////////////////////////////////////////
     public static void AlertsendKeysTo(String value) {
         getDriver().switchTo().alert().sendKeys(value);
     }
-
 
     // ✅ Frame and Window Handling
     public static int switchToFrameByIndex(String tagName, int index) {
@@ -315,7 +265,6 @@ public class Bass_Class extends Driver_manger {
         }
     }
 
-
     public static void switchToFrameByName(String name) {
         getDriver().switchTo().frame(name);
     }
@@ -323,7 +272,6 @@ public class Bass_Class extends Driver_manger {
     public static void switchToDefaultFrame() {
         getDriver().switchTo().defaultContent();
     }
-
 
     // ✅ Assertions / Verification Helpers
     public static boolean ElementDisplay(WebElement element, ElementStatus status) {
@@ -344,24 +292,6 @@ public class Bass_Class extends Driver_manger {
             return false;
         }
     }
-
-    public enum ElementStatus {
-
-        isDisplayed,
-        isEnabled,
-        isSelected
-
-    }
-
-   /* public static boolean isverifyText(WebElement element, String expected) {
-        try {
-            return element.getText().trim().equalsIgnoreCase(expected.trim());
-        } catch (Exception e) {
-            handleException(e, "the test is not verifyed");
-            return false;
-        }
-    }*/
-
 
     /// //////////////////////////////////////////////////////////////////////////////////////////////////////////////
     public static String ElementAction(WebElement element, ElementAction action) {
@@ -389,14 +319,6 @@ public class Bass_Class extends Driver_manger {
         }
     }
 
-    public enum ElementAction {
-        CLEAR,
-        CLICK,
-        SUBMIT,
-        GET_TEXT,
-        GET_TAG
-    }
-
     /// /////////////////////////////////////////////////////////////
 
     // ✅ Screenshots
@@ -419,9 +341,7 @@ public class Bass_Class extends Driver_manger {
         JavascriptExecutor scr = (JavascriptExecutor) getDriver();
 
         scr.executeScript("arguments[0].scrollIntoView();", element);
-
     }
-
 
     public static String getCurrentUrl() {
         return getDriver().getCurrentUrl();
@@ -430,6 +350,15 @@ public class Bass_Class extends Driver_manger {
     public static String getTitle() {
         return getDriver().getTitle();
     }
+
+   /* public static boolean isverifyText(WebElement element, String expected) {
+        try {
+            return element.getText().trim().equalsIgnoreCase(expected.trim());
+        } catch (Exception e) {
+            handleException(e, "the test is not verifyed");
+            return false;
+        }
+    }*/
 
     public static String getWindowHandle() {
         return getDriver().getWindowHandle();
@@ -442,15 +371,12 @@ public class Bass_Class extends Driver_manger {
         ArrayList<String> windowList = new ArrayList<>(windowHandles);
 
         getDriver().switchTo().window(windowList.get(tabIndex));
-
     }
-
 
     // ✅ Exception Handling
     public static void handleException(Exception e, String message) {
         System.err.println(e.getMessage() + "❌ " + message);
     }
-
 
     // ✅ Utility
     public static void waitForSeconds(int seconds) {
@@ -460,20 +386,6 @@ public class Bass_Class extends Driver_manger {
             Thread.currentThread().interrupt(); // restore interrupted state
             handleException(e, "⚠️ Thread was interrupted during wait: ");
         }
-    }
-
-
-    // Highlight element
-    public static void Elementhighlight(WebElement element) {
-        try {
-            JavascriptExecutor js = (JavascriptExecutor) getDriver();
-            js.executeScript("arguments[0].style.border='3px solid red'", element);
-        } catch (Exception e) {
-
-            handleException(e, "element not highlight");
-        }
-
-
     }
 
     // Returns true if file is found, false otherwise
@@ -498,6 +410,9 @@ public class Bass_Class extends Driver_manger {
 
     public static void FileUpload(WebElement element, String filepath) {
 
+        element.click();
+        element.clear();
+
         element.sendKeys(filepath);
 
         //------------------Hidden File Input (when type="file" is hidden via CSS)-------------------//
@@ -508,7 +423,6 @@ public class Bass_Class extends Driver_manger {
         hiddenInput.sendKeys("C:\\Users\\DELL\\Downloads\\resume.pdf");
 */
 
-
     }
 
     public static void multipleFilesuploades(WebElement element, String filePaths) {
@@ -518,6 +432,7 @@ public class Bass_Class extends Driver_manger {
         } catch (Exception e) {
             handleException(e, "File upload failed");
         }
+        // like this
 
        /* // Upload multiple files (if the input allows multiple selection)
         Filesupload(fileInput,
@@ -529,26 +444,7 @@ public class Bass_Class extends Driver_manger {
     public static void NewTab() {
         // Open a new tab
         getDriver().switchTo().newWindow(WindowType.TAB);
-
     }
-
-    //  public static void Movetoslidervalue(WebElement element,  targetValue) {
-
-       /* double step = 0.5;
-        double current = Double.parseDouble(element.getAttribute("value"));
-        int steps = (int) Math.round((targetValue - current) / step);
-
-        element.click();
-
-        for (int i = 0; i < Math.abs(steps); i++) {
-            if (steps > 0)
-                element.sendKeys(Keys.ARROW_RIGHT);
-            else
-                element.sendKeys(Keys.ARROW_LEFT);
-        }
-
-        //System.out.println("✅ Slider moved to: " + element.getAttribute("value"));*/
-    // }
 
     public static void Movetoslidervalue(WebElement element, int startpoint, int endpoint) {
 
@@ -575,7 +471,6 @@ public class Bass_Class extends Driver_manger {
         }
     }
 
-
     public static void setPriceSliderValue(WebElement slider, int priceValue) {
         try {
             int sliderValue = Math.round(priceValue / 1000f);
@@ -595,14 +490,76 @@ public class Bass_Class extends Driver_manger {
             System.out.println("🎯 Target: ₹" + priceValue +
                     " | Displayed: " + slider.getAttribute("aria-valuetext"));
         } catch (Exception e) {
-            e.printStackTrace();
+            handleException(e, "setpricelevel erroe");
+        }
+    }
+
+    public enum NavigationType {
+        BACK,
+        FORWARD,
+        REFRESH
+    }
+
+    public enum Dropdowntype {
+
+        index,
+        value,
+        text
+    }
+
+    public enum LocatorType {
+        ID,
+        CLASS_NAME,
+        NAME,
+        XPATH,
+        TAG_NAME,
+        CSS_SELECTOR
+    }
+
+    // ✅ Enum for alert actions
+    public enum AlertAction {
+        ACCEPT,
+        DISMISS,
+        GET_TEXT
+    }
+
+    //  public static void Movetoslidervalue(WebElement element,  targetValue) {
+
+       /* double step = 0.5;
+        double current = Double.parseDouble(element.getAttribute("value"));
+        int steps = (int) Math.round((targetValue - current) / step);
+
+        element.click();
+
+        for (int i = 0; i < Math.abs(steps); i++) {
+            if (steps > 0)
+                element.sendKeys(Keys.ARROW_RIGHT);
+            else
+                element.sendKeys(Keys.ARROW_LEFT);
         }
 
+        //System.out.println("✅ Slider moved to: " + element.getAttribute("value"));*/
+    // }
+
+    public enum ElementStatus {
+
+        isDisplayed,
+        isEnabled,
+        isSelected
+    }
+
+    public enum ElementAction {
+        CLEAR,
+        CLICK,
+        SUBMIT,
+        GET_TEXT,
+        GET_TAG
+    }
+
+    // ✅ Custom Runtime Exception (can be nested) for findelement
+    public static class FrameworkElementNotFoundException extends RuntimeException {
+        public FrameworkElementNotFoundException(String message, Throwable cause) {
+            super(message, cause);
+        }
     }
 }
-
-
-
-
-
-

@@ -40,6 +40,8 @@ public class Fileread_Manager {
 		contText.excellpath = properties.getProperty("Excell_sheet");
 		contText.sheetname = properties.getProperty("sheet_name");
 
+		contText.fburlpath = properties.getProperty("fburl");
+
 	}
 
 }

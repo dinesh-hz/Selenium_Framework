@@ -1,13 +1,11 @@
 package runners;
 
-
 import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
 
 // this is only run for junit test from junit pakges
 //@RunWith(Cucumber.class)
 @CucumberOptions(features = "./src/test/resources/feature_files",
-
 
         glue = {"StepDefinition", "Helpers"},
 
@@ -31,9 +29,8 @@ public class TestRunner extends AbstractTestNGCucumberTests {
             | -------------------- | --------------------------------------------------------------------------------------- |
             | `mvn test`           | Runs test cases only                                                                    |
             | `mvn clean`          | Deletes old reports, target folder                                                      |
-            | `mvn verify`         | Runs tests **and generates reports** (Cucumber, Extent, etc.)                           |
+            | `mv verify`         | Runs tests **and generates reports** (Cucumber, Extent, etc.)                           |
             | `mvn clean test`     | Cleans old files → Runs tests fresh                                                     |
             | `mvn clean verify` | **Cleans old → Runs all tests → Generates all reports (Cucumber, Extent, Spark, etc.)** |
 */
-
 }

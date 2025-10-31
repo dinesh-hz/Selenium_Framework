@@ -25,7 +25,7 @@ public class contText {
 	public static String excellpath;
 	public static String sheetname;
 	
-	
+	public static String fburlpath;
 	
 	
 	
