@@ -2,7 +2,7 @@ I’m an aspiring QA Automation Engineer skilled in Selenium WebDriver, Java, Cu
 
 What I can do for you:
 
-Develop or maintain Selenium test automation frameworks (Java + Cucumber/TestNG)
+Develop or maintain Selenium test automation frameworks (Java + Cucumber/TestNG) 
 
 Automate web application and API testing
 
